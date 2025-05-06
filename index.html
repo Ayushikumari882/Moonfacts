@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #3c4043;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About the Moon</h1>
+        <ul id="moon-facts-list"></ul>
+    </div>
+    <script>
+        const moonFacts = [
+            {
+                fact: "Distance from Earth",
+                description: "The Moon is about 238,855 miles (384,400 kilometers) away from Earth, which is roughly the same distance as traveling around the Earth 10 times."
+            },
+            {
+                fact: "Lunar Phases",
+                description: "The Moon goes through eight distinct phases in a cycle that lasts about 29.5 days, known as a lunar month."
+            },
+            {
+                fact: "Gravity",
+                description: "The Moon's gravity is about 1/6th that of Earth's. This means if you weigh 180 pounds on Earth, you would weigh only 30 pounds on the Moon."
+            },
+            {
+                fact: "No Atmosphere",
+                description: "The Moon has a very thin atmosphere, which means there is no weather, and temperatures can vary drastically from extremely hot to extremely cold."
+            },
+            {
+                fact: "Moonquakes",
+                description: "Just like Earth has earthquakes, the Moon experiences moonquakes. These are caused by tidal forces from Earth and can last up to 10 minutes."
+            },
+            {
+                fact: "Water Ice",
+                description: "There are permanently shadowed craters at the Moon's poles that contain water ice, which could be crucial for future lunar exploration and habitation."
+            },
+            {
+                fact: "First Human Footsteps",
+                description: "Neil Armstrong was the first human to set foot on the Moon on July 20, 1969, during NASA's Apollo 11 mission."
+            },
+            {
+                fact: "Lunar Maria",
+                description: "The dark, flat areas on the Moon's surface are called 'maria,' which is Latin for 'seas.' They were formed by ancient volcanic eruptions."
+            },
+            {
+                fact: "Tidal Locking",
+                description: "The Moon is tidally locked to Earth, meaning the same side of the Moon always faces our planet. This is why we only see one side of the Moon from Earth."
+            },
+            {
+                fact: "Size Comparison",
+                description: "The Moon is about 1/4th the diameter of Earth, making it the fifth largest moon in the solar system relative to the size of its planet."
+            }
+        ];
+
+        const moonFactsList = document.getElementById('moon-facts-list');
+
+        moonFacts.forEach(fact => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${fact.fact}:</strong> ${fact.description}`;
+            moonFactsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
